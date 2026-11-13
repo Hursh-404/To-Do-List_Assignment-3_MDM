@@ -1,0 +1,79 @@
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #202124;
+  background: #f5f6f8;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+.app {
+  width: 100%;
+  max-width: 620px;
+  background: #fff;
+  padding: 38px;
+  border: 1px solid #e8e9ed;
+  border-radius: 18px;
+  box-shadow: 0 16px 45px rgba(20, 25, 35, 0.07);
+}
+.eyebrow {
+  margin: 0 0 10px;
+  color: #e36d32;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+h1 { margin: 0; font-size: 32px; }
+.subtitle { margin: 9px 0 28px; color: #777; }
+.task-form { display: flex; gap: 10px; }
+input {
+  min-width: 0;
+  flex: 1;
+  padding: 14px 15px;
+  border: 1px solid #dfe1e6;
+  border-radius: 9px;
+  font-size: 15px;
+  outline: none;
+}
+input:focus { border-color: #e36d32; }
+button {
+  border: 0;
+  border-radius: 9px;
+  padding: 0 18px;
+  background: #e36d32;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+button:hover { background: #c95720; }
+.list-section { margin-top: 32px; }
+.list-heading { display: flex; align-items: center; justify-content: space-between; }
+h2 { margin: 0; font-size: 18px; }
+#task-count { color: #888; font-size: 13px; }
+ul { list-style: none; padding: 0; margin: 14px 0 0; }
+.task-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+.task-item input[type="checkbox"] { flex: 0 0 auto; width: 17px; height: 17px; accent-color: #e36d32; }
+.task-title { flex: 1; overflow-wrap: anywhere; }
+.task-item.completed .task-title { color: #999; text-decoration: line-through; }
+.actions { display: flex; gap: 7px; }
+.actions button { padding: 8px 10px; font-size: 12px; }
+.actions .delete { background: #f1f1f1; color: #444; }
+.actions .delete:hover { background: #e5e5e5; }
+#empty-state { color: #999; text-align: center; padding: 24px 0; font-size: 14px; }
+footer { margin-top: 26px; color: #999; font-size: 12px; text-align: center; }
+@media (max-width: 520px) {
+  .app { padding: 25px 20px; }
+  .task-form { flex-direction: column; }
+  .task-form button { padding: 13px; }
+  .actions button { padding: 8px; }
+}
